@@ -24,7 +24,7 @@ def get_uwb_dist(uwb_info):
 async def main():
     uwb_info = UwbModule()
     # initialize paramters
-    tracker_height = 5.0
+    tracker_height = 3.0
 
     """ follower/target system initialization """
     uav_tracker = System()
@@ -39,7 +39,6 @@ async def main():
     await offboard_setup.get_drone_long_lat(uavs, drone_lat_long)
     await offboard_setup.get_drone_local_pos(uavs, drone_lat_long)
 
-    await offboard_setup.get_drone_long_lat(uavs, drone_lat_long)
     await asyncio.sleep(0.1)
 
     """ uwb status check """
